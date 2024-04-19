@@ -1,9 +1,14 @@
 body {
   background-color: #1a1a1a;
   color: #ffffff;
-  font-family: Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  font-size: 100px;
+  font-family: 'Freestyle Script', cursive; /* Freestyle Script als Schriftart */
 }
 
 .container {
@@ -20,6 +25,7 @@ h1 {
 p {
   font-size: 18px;
   line-height: 1.6;
+  text-align: justify;
 }
 
 a {
