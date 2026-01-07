@@ -1,0 +1,5 @@
+title: Tim Schwerdhelm - Lernzettel
+baseurl: ""       # leer, da auf username.github.io
+url: "https://tschwerdhelm.github.io"
+theme: minima     # optional, wir überschreiben Layout aber selbst
+markdown: kramdown

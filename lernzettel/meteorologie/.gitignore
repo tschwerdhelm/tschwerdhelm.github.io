@@ -1,0 +1,18 @@
+# Jekyll build output
+_site/
+
+# Bundler gem files (optional)
+.bundle/
+
+# Windows system files
+Thumbs.db
+desktop.ini
+
+# Windows system files
+Thumbs.db
+desktop.ini
+
+# Editor / IDE files
+.vscode/
+.idea/
+*.swp

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>DME – Distance Measuring Equipment – Tim Schwerdhelm</title>
+  <link rel="stylesheet" href="/index.css">
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #121212;
+      font-family: sans-serif;
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    a { color: #1a0dab; }
+    pre, code {
+      background-color: #f5f5f5;
+      color: #000000;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+    }
+
+    body.dark {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    body.dark a { color: #82aaff; }
+    body.dark pre, body.dark code {
+      background-color: #1e1e1e;
+      color: #f8f8f2;
+    }
+
+    #darkModeToggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      z-index: 1000;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+  </style>
+</head>
+<body>
+  <button id="darkModeToggle">🌙 Dark Mode</button>
+
+  <div class="container">
+    <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">DME – Distance Measuring Equipment</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="dme--distance-measuring-equipment">DME – Distance Measuring Equipment</h1>
+
+<h2 id="definition">Definition</h2>
+<p><strong>DME (Distance Measuring Equipment)</strong> ist ein funkbasiertes Navigationssystem in der Luftfahrt, das die <strong>Schrägentfernung (Slant Range)</strong> zwischen einem Luftfahrzeug und einer Bodenstation misst.</p>
+
+<h2 id="funktionsweise">Funktionsweise</h2>
+<ul>
+  <li>Das Flugzeug sendet <strong>Abfrageimpulse</strong> an eine DME-Bodenstation.</li>
+  <li>Die Bodenstation antwortet nach einer <strong>festen Zeitverzögerung</strong>.</li>
+  <li>Aus der <strong>Laufzeit der Funksignale</strong> berechnet das Bordgerät die Entfernung.</li>
+  <li>Die Anzeige erfolgt meist in <strong>Nautischen Meilen (NM)</strong>.</li>
+</ul>
+
+<h2 id="eigenschaften">Eigenschaften</h2>
+<ul>
+  <li>Misst <strong>keine horizontale</strong>, sondern die <strong>tatsächliche Schrägentfernung</strong>.</li>
+  <li>In großer Höhe nahe der Station kann die angezeigte Entfernung größer sein als die Entfernung über Grund.</li>
+  <li>Sehr <strong>zuverlässig und präzise</strong>, unabhängig von Wetterbedingungen.</li>
+</ul>
+
+<h2 id="kombination-mit-anderen-systemen">Kombination mit anderen Systemen</h2>
+<ul>
+  <li>Häufig gekoppelt mit:
+    <ul>
+      <li><strong>VOR/DME</strong> (Richtungs- und Entfernungsinformation)</li>
+      <li><strong>ILS/DME</strong> (Entfernung zur Landebahn)</li>
+    </ul>
+  </li>
+  <li>Unterstützt Piloten bei:
+    <ul>
+      <li>Positionsbestimmung</li>
+      <li>Anflugverfahren</li>
+      <li>Navigation auf Luftstraßen</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="vorteile">Vorteile</h2>
+<ul>
+  <li>Hohe Genauigkeit</li>
+  <li>Einfache Interpretation</li>
+  <li>Weltweit standardisiert</li>
+</ul>
+
+<h2 id="einschränkungen">Einschränkungen</h2>
+<ul>
+  <li>Benötigt Sichtverbindung zur Bodenstation</li>
+  <li>Keine Richtungsinformation (nur Entfernung)</li>
+</ul>
+
+<h2 id="fazit">Fazit</h2>
+<p>DME ist ein zentrales Navigationshilfsmittel der konventionellen Luftfahrt, das Piloten eine präzise Entfernungsangabe zur Bodenstation liefert und besonders in Kombination mit anderen Systemen unverzichtbar ist.</p>
+
+  </div>
+
+</article>
+
+  </div>
+
+  <script>
+    const toggleButton = document.getElementById('darkModeToggle');
+    const currentTheme = localStorage.getItem('theme');
+
+    if(currentTheme === 'dark') {
+      document.body.classList.add('dark');
+      toggleButton.textContent = '☀️ Light Mode';
+    }
+
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      if(document.body.classList.contains('dark')) {
+        toggleButton.textContent = '☀️ Light Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        toggleButton.textContent = '🌙 Dark Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html>
